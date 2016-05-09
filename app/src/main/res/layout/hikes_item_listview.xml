@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:id="@+id/hike_layout_bg"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/item_image_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:weightSum="1"
+            android:background="#7f000000"
+            android:paddingBottom="10dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Hike title here"
+                android:id="@+id/hike_title"
+                android:textSize="25dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#ffffff"
+                android:textStyle="bold|normal"
+                android:gravity="center"
+                android:layout_weight="0.76" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/hike_owner_picture"
+                android:src="@drawable/blank_profile"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal|bottom" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="By Someone"
+                android:id="@+id/hike_owner_name"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_horizontal|bottom" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

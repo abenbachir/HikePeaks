@@ -1,0 +1,204 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MapFragment"
+    android:tag="MapFragment">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/trail_focus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:gravity="center"
+            android:visibility="visible"
+            android:src="@android:drawable/ic_menu_compass"
+            android:layout_margin="10dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/start_hiking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:text="Start"
+            android:gravity="center"
+            android:src="@android:drawable/ic_media_play"
+            android:layout_margin="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:padding="10dp"
+        android:weightSum="1"
+        android:id="@+id/dashboard_layout"
+        android:background="@color/white_overlay">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.25">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.61"
+                android:background="@drawable/steps"
+                android:layout_marginTop="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0 steps"
+                android:id="@+id/trail_steps_counter"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15dp"
+                android:textColor="#000000"
+                android:layout_weight="20.75" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:weightSum="1"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageView"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.61"
+                android:background="@drawable/path"
+                android:layout_marginTop="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0 km"
+                android:id="@+id/trail_distance"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15dp"
+                android:textColor="#000000"
+                android:layout_weight="20.75" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageView2"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/timer"
+                android:layout_marginTop="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="0:0:0"
+                android:id="@+id/trail_counter_diplay"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:layout_gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageView3"
+                android:layout_weight="0.61"
+                android:background="@drawable/speedmeter"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="2.5 m/s"
+                android:id="@+id/trail_average_speed"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.15"
+        android:layout_gravity="right|bottom"
+        android:id="@+id/hiking_actions_layout">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/trail_capture_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:gravity="center"
+            android:visibility="visible"
+            android:src="@android:drawable/ic_menu_camera"
+            android:layout_margin="10dp"
+            android:layout_gravity="bottom" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/finish_hiking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:gravity="center"
+            android:visibility="visible"
+            android:src="@drawable/abc_ic_clear_material"
+            android:layout_margin="10dp" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

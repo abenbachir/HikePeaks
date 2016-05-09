@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:background="@color/white_overlay"
+        android:paddingBottom="10dp"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:layout_width="310dp"
+            android:layout_height="114dp"
+            android:id="@+id/stats_owner_picture"
+            android:src="@drawable/blank_profile"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.82" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Name"
+            android:id="@+id/stats_owner_name"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:layout_weight="0.76" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="top">
+
+        <!--NOMBRE TOTAL DE HIKES-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Total hiking"/>
+
+        <TextView
+            android:id="@+id/stats_tot_hikes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:text="Hikes" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_overlay"/>
+
+        <!-- DURÉE MOYENNE -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Average duration"/>
+
+        <TextView
+            android:id="@+id/stats_avg_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:text="Pictures" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_overlay"/>
+
+        <!-- VITESSE MOYENNE -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Average Speed"/>
+
+        <TextView
+            android:id="@+id/stats_avg_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:text="Speed" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_overlay"/>
+
+
+        <!-- NOMBRE TOTAL DE KM PARCOURU -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Total number of kilometers traveled"/>
+
+        <TextView
+            android:id="@+id/stats_tot_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:text="Kilometers" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_overlay"/>
+
+        <!-- NOMBRE MOYEN DE KM PARCOURU -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Average number of kilometers traveled"/>
+
+        <TextView
+            android:id="@+id/stats_avg_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:text="Kilometers" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_overlay"/>
+
+        <!-- NOMBRE TOTAL DE PAS -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Total number of steps taken"/>
+
+        <TextView
+            android:id="@+id/stats_tot_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:text="Steps" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_overlay"/>
+
+        <!-- NOMBRE MOYEN DE PAS -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Average number of steps taken"/>
+
+        <TextView
+            android:id="@+id/stats_avg_steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:text="Steps" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_overlay"/>
+
+        <!-- NOMBRE TOTAL DE PHOTOS PRISES -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Total number of pictures taken"/>
+
+        <TextView
+            android:id="@+id/stats_tot_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:text="Pictures" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_overlay"/>
+
+
+
+        <!-- NOMBRE MOYEN DE PHOTOS PRISES -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Average number of pictures taken"/>
+
+        <TextView
+            android:id="@+id/stats_avg_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:text="Pictures" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white_overlay"/>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

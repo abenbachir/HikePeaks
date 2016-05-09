@@ -1,0 +1,54 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HikesFragment"
+    android:tag="HikesFragment">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_gravity="center_horizontal|top"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="My hikes"
+                android:id="@+id/textView"
+                android:layout_gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold|normal"
+                android:singleLine="true"
+                android:fontFamily="Arial" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/hikesListView"
+                android:choiceMode="none"
+                android:clickable="false" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
