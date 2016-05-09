@@ -16,12 +16,14 @@ public class AppApplication extends Application {
         super.onCreate();
         CognitoCachingCredentialsProvider credentialsProvider = new CognitoCachingCredentialsProvider(
                 this,
-                "us-east-1:8762f9c0-a3dd-4a15-80a6-fd1b4eefb3d6", // Identity Pool ID
+                this.getResources().getString(R.string.identity_pool_id), // Identity Pool ID
                 Regions.US_EAST_1 // Region
         );
         DynamoDBManager.getInstance().setCredentialsProvider(credentialsProvider).init();
         // Initialize S3 storage
-        StorageService.initInstance(this);
+        StorageService.initInstance(this,
+                this.getResources().getString(R.string.s3_access_key),
+                this.getResources().getString(R.string.s3_secrect_key));
         // Initialise Terminal
         TerminalManager.getInstance().setContext(this);
         // Initialise AccountManager

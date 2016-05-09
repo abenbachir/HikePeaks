@@ -13,7 +13,11 @@
     -->
 
     <!-- GoogleMapAndroid -->
-    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">AIzaSyBC8dxfpKybUdd544qsDYOfoNukA5PxONc</string>
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">REPLACE_WITH_YOUR_KEY</string>
+    <string name="identity_pool_id" translatable="false" templateMergeStrategy="preserve">REPLACE_WITH_YOUR_KEY</string>
+
+    <string name="s3_access_key" translatable="false" templateMergeStrategy="preserve">REPLACE_WITH_YOUR_KEY</string>
+    <string name="s3_secrect_key" translatable="false" templateMergeStrategy="preserve">REPLACE_WITH_YOUR_KEY</string>
 
 
 </resources>

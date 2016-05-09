@@ -27,15 +27,13 @@ import java.util.Iterator;
 public class StorageService {
 
     protected static StorageService INSTANCE = null;
-    private final String accessKey = "AKIAJQX2CUOZQ4XJ2JFA";
-    private final String secrectKey = "18rpyWq7lJtG5WMAOs81+aDy8rZy9VFOT86+6Bm3";
     private final Regions region = Regions.US_WEST_2;
     private String bucketName = "hikepeaks";
     private AmazonS3 service;
     private Context context;
     private TransferListener transferListener;
 
-    protected StorageService(Context context) {
+    protected StorageService(Context context, String accessKey, String secrectKey) {
         if (context == null)
             throw new NullPointerException("context can not be null");
 
@@ -46,14 +44,14 @@ public class StorageService {
     }
 
     public static StorageService getInstance() {
-        return initInstance(null);
+        return initInstance(null, null, null);
     }
 
-    public static StorageService initInstance(Context context) {
+    public static StorageService initInstance(Context context, String accessKey, String secrectKey) {
         if (INSTANCE == null) {
             synchronized (StorageService.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = new StorageService(context);
+                    INSTANCE = new StorageService(context, accessKey, secrectKey);
                 }
             }
         }
